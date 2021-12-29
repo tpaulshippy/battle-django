@@ -1,0 +1,18 @@
+
+{% block content %}
+  <h1>Card List</h1>
+
+  <a href="create">Create</a>
+
+  {% if card_list %}
+  <ul>
+    {% for card in card_list %}
+      <li>
+        <a href="card/{{ card.id }}">{{ card.name }}</a> ({{card.hp}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no cards.</p>
+  {% endif %}
+{% endblock %}

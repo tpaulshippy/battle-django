@@ -1,0 +1,9 @@
+
+{% block content %}
+<h1>{{ card.name }}</h1>
+
+<p><strong>HP:</strong> {{ card.hp }}</p>
+<a href="{% url 'card_update'  card.id  %}">update</a><br />
+<a href="{% url 'card_delete'  card.id  %}">delete</a>
+
+{% endblock %}
